@@ -1,4 +1,5 @@
 import math
+import pylab
 
 def derivative(function):
     def dfunction(x,epsilon=0.01):
@@ -81,3 +82,13 @@ def trapezoidal(function, n, bounds):
         area += (i) / 2 * (function(a)+function(a+1))
         a += i
     return area
+def graph(function, xmin=-10, xmax=10, accuracy=100):
+    i = float(xmax-xmin)/accuracy
+    x=xmin
+    points = [[],[]]
+    while x <=xmax:
+        points[0].append(x)
+        points[1].append(function(x))
+        x+=i
+    pylab.plot(points[0],points[1], '-')
+    pylab.show()
