@@ -1,0 +1,16 @@
+#So here, a polinomial is going to be in the format of a list,
+#where each new element is to the power of whatever number in
+#the list it is. For example, [1,4,3] would represent y=3x^2+4x+1.
+polynomial = [1,4,3]
+
+#Now we have to make a basic function that evaluates the function
+#at a specific value of x
+def EvalPoly(poly,x):
+    total = 0
+    listnum = 0
+    length = len(poly)
+    while n > 0:
+        total += poly[a] * x**a
+        length -= 1
+        listnum += 1
+    return float(total)
