@@ -72,3 +72,12 @@ LorR is a string which provides wheter it starts at the left or right endpoint''
             area += function(a)*i
             a += i
         return area
+def trapezoidal(function, n, bounds):
+    i = float(bounds[1]-bounds[0])/n
+    a = bounds[0]
+    b = bounds[1]
+    area = 0
+    while a < b:
+        area += (i) / 2 * (function(a)+function(a+1))
+        a += i
+    return area
